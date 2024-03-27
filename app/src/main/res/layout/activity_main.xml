@@ -4,20 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/fondo"
+    >
 
-    <Button
-        android:id="@+id/button"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btGuardar"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:background="@drawable/titulo"
-        android:text="Button"
-        android:textSize="20sp"
-        android:textColor="#139E26"
+        android:background="@drawable/boton1"
+        android:text="Nuevo cultivo"
         android:textAllCaps="false"
+        android:textColor="#DEE4DF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btBase"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/boton2"
+        android:text="Mis cultivos"
+        android:textAllCaps="false"
+        android:textColor="#DEE4DF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606" />
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="156dp"
+        android:layout_height="54dp"
+        android:fontFamily="@font/andalas"
+        android:text="CAMPO"
+        android:textColor="#024E0E"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <Spinner
+        android:id="@+id/spCultivos"
+        android:layout_width="406dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437" />
 </androidx.constraintlayout.widget.ConstraintLayout>
