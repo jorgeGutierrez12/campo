@@ -2,6 +2,7 @@ package com.example.campo
 
 data class tarea(
     val Nombre:String,
-    val Fecha:String
+    val Tipo:String,
+    val completado: Boolean
 
 )

@@ -19,10 +19,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.28" />
+        app:layout_constraintVertical_bias="0.202" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btBase"
@@ -38,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
+        app:layout_constraintVertical_bias="0.6" />
 
     <TextView
         android:id="@+id/texto"
@@ -56,8 +56,8 @@
         app:layout_constraintVertical_bias="0.098" />
 
     <LinearLayout
-        android:layout_width="214dp"
-        android:layout_height="243dp"
+        android:layout_width="329dp"
+        android:layout_height="238dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,8 +68,34 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCultivo"
-            android:layout_width="match_parent"
+            android:layout_width="358dp"
             android:layout_height="match_parent" />
+
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="185dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Nombre del cultivo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.315" />
+
+    <Spinner
+        android:id="@+id/spTipos"
+        android:layout_width="328dp"
+        android:layout_height="43dp"
+        android:background="#83BEEA53"
+        android:entries="@array/items"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.398" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
