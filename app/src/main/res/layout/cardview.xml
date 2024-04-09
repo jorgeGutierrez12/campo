@@ -23,7 +23,7 @@
             android:id="@+id/tvCultivo"
             android:layout_width="175dp"
             android:layout_height="54dp"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="160dp"
             android:layout_marginTop="20dp"
             android:text="cultivo" />
 
@@ -31,9 +31,16 @@
             android:id="@+id/tvTipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="160dp"
             android:layout_marginTop="80dp"
             android:text="tipo" />
+
+        <ImageView
+            android:id="@+id/imMaiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/maiz" />
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
