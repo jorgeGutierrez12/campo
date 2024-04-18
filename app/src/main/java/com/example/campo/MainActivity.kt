@@ -49,15 +49,10 @@ class MainActivity : AppCompatActivity() {
         spinner.setAdapter(adapterSp)
 
         btGuardar.setOnClickListener {
-            var maiz = "Maíz"
             var tipo = spinner.getSelectedItem().toString();
             var name = etNombre.text.toString()
             vmculti.elementos.add(tarea("$name","$tipo", false))
             adapter.notifyDataSetChanged()
-            if (tipo = maiz)
-            {
-
-            }
         }
 
     }
