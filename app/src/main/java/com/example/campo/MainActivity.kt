@@ -1,5 +1,6 @@
 package com.example.campo
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -20,13 +21,16 @@ class MainActivity : AppCompatActivity() {
     lateinit var cultivos: RecyclerView
     lateinit var adapter:Adapter
     private val vmculti:vmCulti by viewModels()
+
     private lateinit var  binding : ActivityMainBinding
+    @SuppressLint("UseRequireInsteadOfGet")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replaceFragment(CultiFragment())
+
         binding.bottomNavigationView.setOnItemSelectedListener {
 
             when (it.itemId)
@@ -41,37 +45,49 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+        val frag = supportFragmentManager.findFragmentById(R.id.frame)as? CultiFragment
+        frag?.let {
+            etNombre = it.view?.findViewById<EditText>(R.id.etNombre)!!
+            btGuardar = it.view?.findViewById<Button>(R.id.btGuardar)!!
+            cultivos = it.view?.findViewById<RecyclerView>(R.id.rvCultivo)!!
+            spinner = it.view?.findViewById<Spinner>(R.id.spTipos)!!
+            adapter = Adapter(vmculti.elementos)
+
+            cultivos.adapter = adapter
+            cultivos.layoutManager = GridLayoutManager(this,
+                1)
+
+
+            val adapterSp: ArrayAdapter<String>
+            val listSp: MutableList<String>
+
+            listSp = ArrayList()
+            listSp.add("Maíz")
+            listSp.add("Mezcal")
+            listSp.add("Caña")
+            adapterSp = ArrayAdapter(
+                applicationContext,
+                android.R.layout.simple_spinner_item, listSp
+            )
+            adapterSp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinner.setAdapter(adapterSp)
+
+            btGuardar.setOnClickListener {
+                var tipo = spinner.getSelectedItem().toString();
+                var name = etNombre.text.toString()
+                vmculti.elementos.add(tarea("$name","$tipo", false))
+                adapter.notifyDataSetChanged()
+            }
+        }
+
+        /*
         etNombre = findViewById(R.id.etNombre)
         btGuardar = findViewById(R.id.btGuardar)
         cultivos = findViewById(R.id.rvCultivo)
         spinner = findViewById(R.id.spTipos)
-        adapter = Adapter(vmculti.elementos)
 
-        cultivos.adapter = adapter
-        cultivos.layoutManager = GridLayoutManager(this,
-            1)
+         */
 
-
-        val adapterSp: ArrayAdapter<String>
-        val listSp: MutableList<String>
-
-        listSp = ArrayList()
-        listSp.add("Maíz")
-        listSp.add("Mezcal")
-        listSp.add("Caña")
-        adapterSp = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, listSp
-        )
-        adapterSp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner.setAdapter(adapterSp)
-
-        btGuardar.setOnClickListener {
-            var tipo = spinner.getSelectedItem().toString();
-            var name = etNombre.text.toString()
-            vmculti.elementos.add(tarea("$name","$tipo", false))
-            adapter.notifyDataSetChanged()
-        }
 
     }
 
