@@ -3,23 +3,12 @@ package com.example.campo
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+
 import com.example.campo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var spinner : Spinner
-    lateinit var etNombre : EditText
-    lateinit var btGuardar: Button
-    lateinit var cultivos: RecyclerView
-    lateinit var adapter:Adapter
     private val vmculti:vmCulti by viewModels()
 
     private lateinit var  binding : ActivityMainBinding
@@ -51,13 +40,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        /*
-        etNombre = findViewById(R.id.etNombre)
-        btGuardar = findViewById(R.id.btGuardar)
-        cultivos = findViewById(R.id.rvCultivo)
-        spinner = findViewById(R.id.spTipos)
-
-         */
 
 
     }
