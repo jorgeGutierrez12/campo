@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btGuardar"
             android:layout_width="250dp"
             android:layout_height="60dp"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.202" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btBase"
             android:layout_width="250dp"
             android:layout_height="60dp"
@@ -84,6 +84,7 @@
             android:ems="10"
             android:inputType="text"
             android:text="Nombre del cultivo"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,5 +102,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.398" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

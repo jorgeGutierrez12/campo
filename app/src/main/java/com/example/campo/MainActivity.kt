@@ -47,38 +47,9 @@ class MainActivity : AppCompatActivity() {
 
         val frag = supportFragmentManager.findFragmentById(R.id.frame)as? CultiFragment
         frag?.let {
-            etNombre = it.view?.findViewById<EditText>(R.id.etNombre)!!
-            btGuardar = it.view?.findViewById<Button>(R.id.btGuardar)!!
-            cultivos = it.view?.findViewById<RecyclerView>(R.id.rvCultivo)!!
-            spinner = it.view?.findViewById<Spinner>(R.id.spTipos)!!
-            adapter = Adapter(vmculti.elementos)
 
-            cultivos.adapter = adapter
-            cultivos.layoutManager = GridLayoutManager(this,
-                1)
-
-
-            val adapterSp: ArrayAdapter<String>
-            val listSp: MutableList<String>
-
-            listSp = ArrayList()
-            listSp.add("Maíz")
-            listSp.add("Mezcal")
-            listSp.add("Caña")
-            adapterSp = ArrayAdapter(
-                applicationContext,
-                android.R.layout.simple_spinner_item, listSp
-            )
-            adapterSp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            spinner.setAdapter(adapterSp)
-
-            btGuardar.setOnClickListener {
-                var tipo = spinner.getSelectedItem().toString();
-                var name = etNombre.text.toString()
-                vmculti.elementos.add(tarea("$name","$tipo", false))
-                adapter.notifyDataSetChanged()
-            }
         }
+
 
         /*
         etNombre = findViewById(R.id.etNombre)
