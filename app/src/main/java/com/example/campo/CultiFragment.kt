@@ -11,6 +11,7 @@ import androidx.activity.viewModels
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.RecyclerView
 
@@ -27,9 +28,9 @@ class CultiFragment : Fragment() {
     lateinit var btGuardar: Button
     lateinit var cultivos: RecyclerView
     lateinit var adapter:Adapter
-    private val vmculti:vmCulti by viewModels()
     private var param1: String? = null
     private var param2: String? = null
+    private val vmculti: vmCulti by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,9 +75,9 @@ class CultiFragment : Fragment() {
         adapterSp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.setAdapter(adapterSp)
         btGuardar.setOnClickListener {
-            var tipo = spinner.getSelectedItem().toString();
-            var name = etNombre.text.toString()
-            vmculti.elementos.add(tarea("$name", "$tipo", false))
+            val tipo = spinner.selectedItem.toString()
+            val name = etNombre.text.toString()
+            vmculti.elementos.add(tarea(name, tipo, false))
             adapter.notifyDataSetChanged()
         }
         return view

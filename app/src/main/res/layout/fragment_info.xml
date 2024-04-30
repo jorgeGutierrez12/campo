@@ -6,10 +6,13 @@
     tools:context=".info"
     android:background="@drawable/fondo2">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/cloudCoverText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="wrap_content"
+        android:text="Cloud Cover"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"/>
 
 </FrameLayout>
