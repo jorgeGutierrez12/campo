@@ -8,10 +8,11 @@
 
     <TextView
         android:id="@+id/rain_chance_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Posibilidad de lluvia"
+        android:layout_width="221dp"
+        android:layout_height="54dp"
         android:layout_gravity="center"
-        />
+        android:text="Posibilidad de lluvia"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
 </FrameLayout>
