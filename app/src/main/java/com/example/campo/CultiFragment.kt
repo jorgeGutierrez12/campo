@@ -23,11 +23,11 @@ private const val ARG_PARAM2 = "param2"
 
 
 class CultiFragment : Fragment() {
-    lateinit var spinner : Spinner
-    lateinit var etNombre : EditText
+    lateinit var spinner: Spinner
+    lateinit var etNombre: EditText
     lateinit var btGuardar: Button
     lateinit var cultivos: RecyclerView
-    lateinit var adapter:Adapter
+    lateinit var adapter: Adapter
     private var param1: String? = null
     private var param2: String? = null
     private val vmculti: vmCulti by activityViewModels()
@@ -39,6 +39,7 @@ class CultiFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,7 +47,7 @@ class CultiFragment : Fragment() {
 
         // Inflate the layout for this fragment
         var view: View? = null
-        view =inflater.inflate(R.layout.fragment_culti, container, false)
+        view = inflater.inflate(R.layout.fragment_culti, container, false)
 
         etNombre = view.findViewById<EditText>(R.id.etNombre)
         btGuardar = view.findViewById<Button>(R.id.btGuardar)
@@ -55,7 +56,7 @@ class CultiFragment : Fragment() {
         adapter = Adapter(vmculti.elementos)
 
         cultivos.adapter = adapter
-       cultivos.layoutManager = GridLayoutManager(
+        cultivos.layoutManager = GridLayoutManager(
             requireContext(),
             1,
         )
@@ -83,4 +84,5 @@ class CultiFragment : Fragment() {
         }
         return view
     }
+}
 
