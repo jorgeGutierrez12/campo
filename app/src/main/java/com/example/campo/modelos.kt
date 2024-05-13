@@ -6,7 +6,8 @@ data class WeatherResponse(
 )
 
 data class Main(
-    val temp: Double
+    var temp: Float = 0.2f,
+    val humidity : Int
 )
 
 data class Weather(

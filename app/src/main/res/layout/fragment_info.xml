@@ -1,18 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".info"
     android:background="@drawable/fondo2">
 
-    <TextView
-        android:id="@+id/rain_chance_text_view"
-        android:layout_width="221dp"
-        android:layout_height="54dp"
-        android:layout_gravity="center"
-        android:text="Posibilidad de lluvia"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/humedad"
+            android:layout_width="221dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:text="Humedad:"
+            android:textColor="#000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.385" />
+
+        <TextView
+            android:id="@+id/rain_chance_text_view"
+            android:layout_width="221dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:text="Posibilidad de lluvia:"
+            android:textColor="#000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.252"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.067" />
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="217dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:text="Temperatura:"
+            android:textColor="#000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.255" />
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="128dp"
+            android:layout_height="100dp"
+            android:src="@android:drawable/btn_default"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.943"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.045" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

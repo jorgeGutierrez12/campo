@@ -11,11 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btGuardar"
             android:layout_width="250dp"
             android:layout_height="60dp"
-            android:background="@drawable/boton1"
+            android:background="@drawable/rounded_button"
             android:text="Nuevo cultivo"
             android:textAllCaps="false"
             android:textColor="#DEE4DF"
@@ -27,11 +27,11 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.202" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btBase"
             android:layout_width="250dp"
             android:layout_height="60dp"
-            android:background="@drawable/boton2"
+            android:background="@drawable/rounded_button"
             android:text="Mis cultivos"
             android:textAllCaps="false"
             android:textColor="#DEE4DF"
@@ -60,20 +60,20 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="350dp"
-            android:layout_height="186dp"
+            android:layout_width="352dp"
+            android:layout_height="229dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.76">
+            app:layout_constraintVertical_bias="0.854">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvCultivo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
@@ -97,6 +97,7 @@
             android:layout_height="43dp"
             android:background="#83BEEA53"
             android:entries="@array/items"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

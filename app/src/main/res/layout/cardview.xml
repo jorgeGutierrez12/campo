@@ -39,17 +39,29 @@
 
         <ImageView
             android:id="@+id/imMaiz"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="134dp"
             app:srcCompat="@mipmap/maiz" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnEliminar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="200dp"
+            android:background="@drawable/boton1"
             android:layout_marginTop="110dp"
-            android:text="Eliminar" />
+            android:text="Eliminar"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/tvFechaRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="130dp"
+            android:text="TextView"
+            android:textColor="#000000"/>
+
 
     </androidx.cardview.widget.CardView>
 

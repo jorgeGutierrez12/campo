@@ -14,6 +14,9 @@ import android.widget.Spinner
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.RecyclerView
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -79,7 +82,8 @@ class CultiFragment : Fragment() {
         btGuardar.setOnClickListener {
             val tipo = spinner.selectedItem.toString()
             val name = etNombre.text.toString()
-            vmculti.elementos.add(tarea(name, tipo, false))
+            val fechaActual = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(Date())
+            vmculti.elementos.add(tarea(name, tipo, fechaActual,false))
             adapter.notifyDataSetChanged()
         }
         return view
