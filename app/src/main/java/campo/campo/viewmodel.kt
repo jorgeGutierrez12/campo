@@ -1,4 +1,4 @@
-package com.example.campo
+package campo.campo
 
 import androidx.lifecycle.ViewModel
 

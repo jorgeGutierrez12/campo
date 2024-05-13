@@ -1,4 +1,4 @@
-package com.example.campo
+package campo.campo
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
-
+import com.example.campo.R
 
 
 class Adapter(private val elementos: MutableList<tarea>) : RecyclerView.Adapter<Adapter.ViewHolder>() {

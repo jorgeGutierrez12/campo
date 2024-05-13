@@ -1,4 +1,4 @@
-package com.example.campo
+package campo.example.campo
 
 import org.junit.Test
 

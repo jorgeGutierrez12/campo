@@ -1,4 +1,4 @@
-package com.example.campo
+package campo.campo
 
 import retrofit2.Call
 import retrofit2.http.GET

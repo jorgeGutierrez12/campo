@@ -1,4 +1,4 @@
-package com.example.campo
+package campo.example.campo
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CultiFragment"
+    tools:context="campo.campo.CultiFragment"
     android:background="@drawable/fondo">
 
     <androidx.constraintlayout.widget.ConstraintLayout

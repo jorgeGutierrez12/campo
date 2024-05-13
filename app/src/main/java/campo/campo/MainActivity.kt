@@ -1,15 +1,15 @@
-package com.example.campo
+package campo.campo
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
+import com.example.campo.R
 
 import com.example.campo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private val vmculti:vmCulti by viewModels()
 
     private lateinit var  binding : ActivityMainBinding
     @SuppressLint("UseRequireInsteadOfGet")

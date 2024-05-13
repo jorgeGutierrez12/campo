@@ -1,4 +1,4 @@
-package com.example.campo
+package campo.campo
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.campo.R
 import retrofit2.Retrofit
 import retrofit2.Response
 import retrofit2.Call

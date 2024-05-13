@@ -1,4 +1,4 @@
-package com.example.campo
+package campo.campo
 
 data class WeatherResponse(
     val main: Main,
