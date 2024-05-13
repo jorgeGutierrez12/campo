@@ -14,8 +14,9 @@
         android:theme="@style/Theme.Campo"
         tools:targetApi="31">
         <activity
-            android:name="campo.campo.MainActivity"
+            android:name="campo.campo.SplashActivity"
 
+            android:theme="@style/Theme.App.SplashScreen"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -24,6 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="campo.campo.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Campo">
+    </activity>
     </application>
 
 </manifest>
